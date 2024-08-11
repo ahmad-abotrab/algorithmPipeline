@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.8.6-openjdk-17' // Using Maven with Java 17 in Docker
-            args '-v /root/.m2:/root/.m2'  // Caching Maven dependencies (optional)
-        }
-    }
+    agent any
 
     stages {
         stage('Checkout') {
